@@ -1,0 +1,13 @@
+#disable the boot animation
+
+onboot
+	setprop ro.kernel.android.bootanim 0
+	setprop debug.sf.nobootanimation 1
+	chown system system /sys/class/backlight/acpi_video0/brightness
+
+	modprobe ath3k
+	modprobe rfcomm
+	modprobe btusb
+	modprobe ath9k
+
+	cp /system/etc/asound.state /data

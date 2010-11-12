@@ -1,0 +1,37 @@
+set -x
+
+generic_viewpad10_info()
+{
+	# common for all Eee PC models
+	PREDEV=snd-hda-codec-realtek
+	SNDDEV=snd-hda-intel
+        CAMDEV=uvcvideo
+
+	board=`cat /sys/class/dmi/id/product_name`
+
+	case "$board" in
+		VPAD10)
+                        FB0DEV=i915
+                        WIFDEV=ath9k
+			;;
+		*)
+			;;
+	esac
+        return 0 
+}
+
+detect_hardware()
+{
+
+	case "`cat /sys/class/dmi/id/uevent`" in
+		*VPAD10*)
+			generic_viewpad10_info
+			;;
+		*)
+			echo "error WARNING: Not a ViewSonic ViewPad 10"
+			;;
+	esac
+
+
+}
+
