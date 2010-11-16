@@ -1,6 +1,6 @@
 set -x
 
-generic_viewpad10_info()
+viewpad10_info()
 {
 	# common for all Eee PC models
 	PREDEV=snd-hda-codec-realtek
@@ -25,7 +25,7 @@ detect_hardware()
 
 	case "`cat /sys/class/dmi/id/uevent`" in
 		*VPAD10*)
-			generic_viewpad10_info
+			viewpad10_info
 			;;
 		*)
 			echo "error WARNING: Not a ViewSonic ViewPad 10"
