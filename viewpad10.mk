@@ -9,4 +9,5 @@ PRODUCT_PACKAGE_OVERLAYS := device/viewsonic/viewpad10/overlays
 
 PRODUCT_COPY_FILES += \
 	device/viewsonic/viewpad10/apps/AndAppStore-1_6_8.apk:system/app/AndAppStore.apk \
+        device/viewsonic/viewpad10/apps/multitouch.apk:system/app/multitouch.apk \
 	device/viewsonic/viewpad10/asound.state:system/etc/asound.state
