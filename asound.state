@@ -80,66 +80,22 @@ state.Intel {
 		comment.count 2
 		iface MIXER
 		name 'Capture Switch'
-		value.0 true
-		value.1 true
-	}
-	control.9 {
-		comment.access 'read write'
-		comment.type BOOLEAN
-		comment.count 2
-		iface MIXER
-		name 'Capture Switch'
-		index 1
 		value.0 false
 		value.1 false
 	}
+	control.9 {
+		comment.access 'read write'
+		comment.type INTEGER
+		comment.count 2
+		comment.range '0 - 31'
+		comment.dbmin -1350
+		comment.dbmax 3300
+		iface MIXER
+		name 'Capture Volume'
+		value.0 0
+		value.1 0
+	}
 	control.10 {
-		comment.access 'read write'
-		comment.type INTEGER
-		comment.count 2
-		comment.range '0 - 31'
-		comment.dbmin -1350
-		comment.dbmax 3300
-		iface MIXER
-		name 'Capture Volume'
-		value.0 31
-		value.1 31
-	}
-	control.11 {
-		comment.access 'read write'
-		comment.type INTEGER
-		comment.count 2
-		comment.range '0 - 31'
-		comment.dbmin -1350
-		comment.dbmax 3300
-		iface MIXER
-		name 'Capture Volume'
-		index 1
-		value.0 31
-		value.1 31
-	}
-	control.12 {
-		comment.access 'read write'
-		comment.type INTEGER
-		comment.count 2
-		comment.range '0 - 31'
-		comment.dbmin -3450
-		comment.dbmax 1200
-		iface MIXER
-		name 'Beep Playback Volume'
-		value.0 31
-		value.1 31
-	}
-	control.13 {
-		comment.access 'read write'
-		comment.type BOOLEAN
-		comment.count 2
-		iface MIXER
-		name 'Beep Playback Switch'
-		value.0 true
-		value.1 true
-	}
-	control.14 {
 		comment.access 'read write'
 		comment.type INTEGER
 		comment.count 1
@@ -150,7 +106,7 @@ state.Intel {
 		name 'Master Playback Volume'
 		value 64
 	}
-	control.15 {
+	control.11 {
 		comment.access 'read write'
 		comment.type BOOLEAN
 		comment.count 1
