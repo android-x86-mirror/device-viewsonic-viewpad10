@@ -6,17 +6,14 @@ viewpad10_info()
 	PREDEV=snd-hda-codec-realtek
 	SNDDEV=snd-hda-intel
         CAMDEV=uvcvideo
+	FB0DEV=i915
+	WIFDEV=ath9k
 
 	board=`cat /sys/class/dmi/id/product_name`
 
 	case "$board" in
-		Intel)
-			FB0DEV=i915
-			WIFDEV=ath9k
-			;;
-		VPAD10)
-                        FB0DEV=i915
-                        WIFDEV=ath9k
+		PX1)
+			WIFDEV=rt2860sta
 			;;
 		*)
 			;;
