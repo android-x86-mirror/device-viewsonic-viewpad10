@@ -4,6 +4,11 @@ on boot
     chown system audio /dev/snd/
     chmod 0775 /dev/snd/
 
+    chmod /data/misc/hcid 0770 bluetooth bluetooth
+    
+    mkdir /SSD 0777 system system
+    mount ext3 /dev/block/sda1 /SSD
+
     symlink /dev/snd/pcmC0D0c /dev/pcmC0D0c
     symlink /dev/snd/pcmC0D0p /dev/pcmC0D0p
     symlink /dev/snd/controlC0 /dev/controlC0
