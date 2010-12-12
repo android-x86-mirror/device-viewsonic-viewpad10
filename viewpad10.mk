@@ -9,7 +9,5 @@ PRODUCT_PACKAGE_OVERLAYS := device/viewsonic/viewpad10/overlays
 
 PRODUCT_COPY_FILES += \
 	device/viewsonic/viewpad10/asound.state:system/etc/asound.state \
-	device/viewsonic/viewpad10/asound.conf:system/etc/asound.conf \
 	device/viewsonic/viewpad10/init.viewpad10.sh:system/etc/init.viewpad10.sh\
         device/viewsonic/viewpad10/modprobe.conf:system/etc/modprobe.conf \
-	device/viewsonic/viewpad10/Front_Center.wav:system/etc/Front_Center.wav
