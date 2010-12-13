@@ -4,7 +4,7 @@ viewpad10_info()
 {
 	# common for all Eee PC models
 	PREDEV=snd-hda-codec-realtek
-	SNDDEV="snd-hda-intel model=auto position_fix=1"
+	SNDDEV="snd-hda-intel model=3stack-dig"
         CAMDEV=uvcvideo
 	FB0DEV=i915
 	WIFDEV=ath9k
